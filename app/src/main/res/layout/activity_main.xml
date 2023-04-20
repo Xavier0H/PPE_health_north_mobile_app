@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f2f2f2">
+
+
+    <androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="25sp"
+    app:cardElevation="50sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Health North Connexion"
+            android:textColor="#AA6F18"
+            android:textSize="30sp"></TextView>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="Veuillez rentrer vos identifiant utilisateur"
+            android:textColor="@color/black"></TextView>
+
+            <TextView
+            android:id="@+id/errorConnectAccountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="Error"
+            android:textColor="#FF0000"
+            android:textSize="20dp"
+            android:visibility="gone"></TextView>
+
+            <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="10dp"
+            android:background="#f2f2f2"
+            android:hint="Nom d'utilisateur"
+            android:padding="10dp"></EditText>
+
+            <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="10dp"
+            android:background="#f2f2f2"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:padding="10dp"></EditText>
+
+            <TextView
+            android:id="@+id/createAccountRedirectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="Créer un compte"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_margin="35dp"></TextView>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <Button
+                android:id="@+id/connectBtn"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:backgroundTint="#4CAF50"
+                android:text="Se connecter"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"></Button>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
