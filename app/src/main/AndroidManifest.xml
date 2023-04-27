@@ -15,11 +15,23 @@
         android:theme="@style/Theme.Health_north_app"
         tools:targetApi="31">
         <activity
-            android:name=".profileActivity"
+            android:name=".AppointmentListActivity"
             android:exported="false" />
-        <activity android:name=".AppointmentActivity" android:label="Mes Rendez-vous"/>
-        <activity android:name=".DocumentActivity" android:label="Mes Documents"/>
-        <activity android:name=".DashBoardActivity" android:label="Tableaux de Bord"/>
+        <activity
+            android:name=".DocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:label="Mes Informations" />
+        <activity
+            android:name=".AppointmentActivity"
+            android:label="Mes Rendez-vous" />
+        <activity
+            android:name=".DocumentActivity"
+            android:label="Mes Documents" />
+        <activity
+            android:name=".DashBoardActivity"
+            android:label="Tableaux de Bord" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

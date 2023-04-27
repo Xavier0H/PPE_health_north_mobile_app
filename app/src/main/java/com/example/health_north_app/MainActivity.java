@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText passwordEditText;
 
     private Button connectBtn;
-    private TextView createAccountRedirectBtn;
+    private TextView DashBoardRedirectBtn;
 
     private String username;
     private String password;
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         connectBtn = findViewById(R.id.connectBtn);
-        createAccountRedirectBtn = findViewById(R.id.createAccountRedirectBtn);
+        DashBoardRedirectBtn = findViewById(R.id.createAccountRedirectBtn);
         controle = Control.getInstance(this);
         controle.setMainActivity(this);
 
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        createAccountRedirectBtn.setOnClickListener(new View.OnClickListener() {
+        DashBoardRedirectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent createAccountActivity = new Intent(getApplicationContext(), CreateAccountActivity.class);
-                startActivity(createAccountActivity);
+                Intent goDashBoardActivity = new Intent(getApplicationContext(), DashBoardActivity.class);
+                startActivity(goDashBoardActivity);
             }
         });
 

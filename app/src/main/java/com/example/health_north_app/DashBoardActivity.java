@@ -14,11 +14,43 @@ public class DashBoardActivity extends AppCompatActivity {
 
     private Control controle;
     private ImageButton btnLogoutImg;
+
+    private ImageButton btnDocumentImg;
+
+    private ImageButton btnUserImg;
+
+    private ImageButton btnAppointmentImg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
         init();
+
+        btnUserImg = findViewById(R.id.btnUserImg);
+        btnDocumentImg = findViewById(R.id.btnDocumentImg);
+        btnAppointmentImg = findViewById(R.id.btnAppointmentImg);
+
+        btnUserImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent infoProfileActivity = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(infoProfileActivity);
+            }
+        });
+        btnDocumentImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent infoDocActivity = new Intent(getApplicationContext(), DocActivity.class);
+                startActivity(infoDocActivity);
+            }
+        });
+        btnAppointmentImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent infoAppointmentListActivity = new Intent(getApplicationContext(), AppointmentListActivity.class);
+                startActivity(infoAppointmentListActivity);
+            }
+        });
     }
 
     /**
@@ -29,26 +61,10 @@ public class DashBoardActivity extends AppCompatActivity {
         controle.setComeToListProduct(false);
         controle.resetArraysAndContext();
         btnLogoutImg = findViewById(R.id.btnLogoutImg);
-        ecouteMenu((ImageButton)findViewById(R.id.btnDocumentImg), DocumentActivity.class);
-        ecouteMenu((ImageButton)findViewById(R.id.btnUserImg), profileActivity.class);
-        ecouteMenu((ImageButton)findViewById(R.id.btnAppointmentImg), AppointmentActivity.class);
         retourLogin();
     }
 
-    /**
-     * Permet d'ecouter le click sur un object de type ImageButton
-     * @param imageButton l'object sur lequel il faut ecouté le click
-     * @param classe l"activity a lancé si le button est clické
-     */
-    private void ecouteMenu(ImageButton imageButton, final Class classe){
-        imageButton.setOnClickListener(new ImageButton.OnClickListener() {
-            public void onClick(View v){
-                Intent intent = new Intent(DashBoardActivity.this, classe);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-            }
-        });
-    }
+
 
     /**
      * Ecouteur sur l'ImageButton btnLogoutImg, permet de retourner a l'activity de connection
